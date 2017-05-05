@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<title>Sign-In</title>
+<meta charset = "UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css"href="style.css"> 
+<SCRIPT LANGUAGE="JavaScript">
+function NameData (form) {
+    var TestVar = form.inputbox.value;
+	if(TestVar.length===0)
+		{
+    alert ("You must have not entered anything " + TestVar+ " please enter your name");
+		}
+	else if (TestVar.length>0)
+	{	
+		
+		window.open("MFTExamII.html");
+		
+		localStorage.clear();
+		localStorage.setItem("name", TestVar)
+	}
 
-You can use the [editor on GitHub](https://github.com/mstclair/codeFellowExamSite/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+}
+</SCRIPT>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+</head>
+<body>
 
-### Markdown
+<div class="container">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<header>
+   <h1>What you need to know to pass the Washington State MFT Licensure Exam</h1>
+</header>
+  
+<article>
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+	<h1 style = "background-color: black; width: 100%; height:15%;" >Sign in and access resources, strategies, and other helpful information</h1>
+ 
+ <img src = "WAstate.jpg">
+ <FORM NAME="myform" ACTION="" METHOD="GET">Enter Name <BR>
+<INPUT TYPE="text" NAME="inputbox" VALUE="" placeholder= "Name"><P>
+<INPUT TYPE="button" NAME="button" Value="Submit" onClick="NameData(this.form)">
+</FORM>
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+</article>
 
-**Bold** and _Italic_ and `Code` text
+<footer>Matt St.Clair Web Productions</footer>
 
-[Link](url) and ![Image](src)
-```
+</div>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+</body>
 
-### Jekyll Themes
+</html>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mstclair/codeFellowExamSite/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
